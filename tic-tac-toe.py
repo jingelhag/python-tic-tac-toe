@@ -119,14 +119,13 @@ while True:
     possibleMoves = []
     for key in theBoard.keys():
         possibleMoves.append(key)
-    print(possibleMoves)
     print("Welcome to a game of tic-tac-toe!")
-    print("Do you wanna be X or O??")
+    print("Do you wanna be X or O?")
 
     # asks user for input and sets that choice for the game
     choice = input().upper()
     while not(choice == 'X' or choice == 'O'):
-        print("Wrong input!! Please pick either X or O!")
+        print("Wrong input!! Please pick either X or O then Enter!")
         choice = input().upper()
     if choice == 'X':
         setup['player'] = 'X'
@@ -144,7 +143,6 @@ while True:
 
     print(currentPlayer + " starts!")
     printBoard()
-    gameStatus = GAMEISLIVE
 
     while True:
         oldPlayer = currentPlayer
@@ -164,7 +162,7 @@ while True:
         print("Wanna play again? Enter 'Y/N'")
         choice = input().upper()
         while not(choice == 'Y' or choice == 'N'):
-            print("Wrong input!! Please pick either Y or N!")
+            print("Wrong input!! Please pick either Y or N then Enter!")
             choice = input().upper()
         if choice == 'Y':
             break
